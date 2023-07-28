@@ -1,12 +1,28 @@
+:root {
+  --invert-rate: 0%;
+  --video-info-color: rgb(96, 96, 96);
+  --thumbnail-border-radius: 0;
+  --video-time-border-radius: 2px;
+}
+
+.dark-theme {
+  --invert-rate: 100%;
+  --video-info-color: rgb(160, 160, 160);
+  --thumbnail-border-radius: 14px;
+  --video-time-border-radius: 6px;
+}
+
 .thumbnail {
   width: 100%;
+  border-radius: var(--thumbnail-border-radius);
 }
 
 .video-title {
+  filter: invert(var(--invert-rate));
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 700;
   line-height: 20px;
 }
 
@@ -39,13 +55,13 @@
   position: absolute;
   bottom: 8px;
   right: 4px;
-  border-radius: 2px;
+  border-radius: var(--video-time-border-radius);
 }
 
 .video-author,
 .video-stats {
-  font-size: 12px;
-  color: rgb(96, 96, 96);
+  font-size: 14px;
+  color: var(--video-info-color);
 }
 
 .video-author {

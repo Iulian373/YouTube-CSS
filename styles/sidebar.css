@@ -1,32 +1,46 @@
+:root {
+  --background-color: white;
+  --invert-rate: 0%;
+  --side-bar-hover-color: rgb(235, 235, 235);
+}
+
+.dark-theme {
+  --background-color: rgb(24, 24, 24);
+  --invert-rate: 100%;
+  --side-bar-hover-color: rgb(80, 80, 80);
+}
+
 .sidebar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    top: 55px;
-    background-color: white;
-    width: 72px;
-    z-index: 200;
-    padding-top: 4px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  background-color: var(--background-color);
+  width: 72px;
+  z-index: 200;
+  padding-top: 4px;
 }
 
 .sidebar-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 74px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+  cursor: pointer;
 }
 
 .sidebar-link:hover {
-    background-color: rgb(235, 235, 235);
+  background-color: var(--side-bar-hover-color);
 }
 
 .sidebar-link img {
-    height: 24px;
+  height: 24px;
+  filter: invert(var(--invert-rate));
 }
 
 .sidebar-link div {
-    font-size: 10px;
-    margin-top: 5px;
+  font-size: 10px;
+  margin-top: 5px;
+  filter: invert(var(--invert-rate));
 }
